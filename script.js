@@ -19,7 +19,7 @@ async function loadWeather() {
         console.log('Ошибка при получении данных о местоположении.');
         return null;
       }
-    const {latitude, longitude} = locationData;
+    const {latitude, longitude} = locationData; 
     const response = await fetch(`${url}?latitude=${latitude}&longitude=${longitude}&current_weather=true`);
     if(!response.ok){
         throw new Error(response.status +" " + response.statusText);
